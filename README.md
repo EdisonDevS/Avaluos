@@ -8,7 +8,6 @@ Pagina web para la generación automatizada de avalúos
 
 ## Tecnologías usadas
   * [Laravel 7.X](https://laravel.com/docs/7.x/installation)
-  * [Laravel Shift Blueprint](https://laravel-news.com/laravel-shift-blueprint)
   * [MySQL](https://www.mysql.com)
   * [TailWindCSS](https://tailwindcss.com)
 
