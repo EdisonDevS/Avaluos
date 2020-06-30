@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'suscripcion'
     ];
 
     /**
@@ -36,4 +36,28 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function menu() {
+        switch($this->suscripcion) {
+            case 'demo':
+                return [
+                    [
+                        'name' => 'Dashboard',
+                        'route' =>'home',
+                        'url' => '',
+                        'icon' => 'dashboard',
+                        'description' => ''
+                    ],
+                    [
+                        'name' => 'Avaluos',
+                        'route' => 'user.misavaluos',
+                        'url' => '',
+                        'icon' => 'badge',
+                        'description' => ''
+                    ]
+                ];
+            default:
+                return $this;
+        }
+    }
 }
