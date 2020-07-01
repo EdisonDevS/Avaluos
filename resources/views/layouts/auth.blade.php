@@ -16,6 +16,10 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
 
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none">
 <div class="h-screen flex overflow-hidden bg-gray-100" x-data="{ sidebarOpen: false }"
@@ -156,4 +160,11 @@
     </div>
 </div>
 </body>
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    </script>
 </html>

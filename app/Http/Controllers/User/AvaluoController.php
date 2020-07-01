@@ -13,9 +13,9 @@ class AvaluoController extends Controller
         return view('user.misAvaluos');
     }
 
-    public function showCrearAvaluo()
+    public function crearAvaluo()
     {
-        return view('user.crearAvaluo');
+        return view('user.editarAvaluo');
     }
 
     public function showBorradores()
