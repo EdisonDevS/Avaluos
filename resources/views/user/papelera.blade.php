@@ -1,6 +1,19 @@
 @extends('layouts.auth')
 
 @section('content')
+<div class="flex w-full items-center justify-center bg-grey-lighter" onclick="event.preventDefault();
+document.getElementById('crear-avaluo').submit();">
+    <label class="w-full flex flex-col items-center px-4 py-6 bg-white text-red-600 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-red-600 hover:text-white">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+        <span class="mt-2 text-base leading-normal">Vaciar la papelera</span>
+
+    </label>
+    <form id="crear-avaluo" action="{{ route('user.crear_avaluo') }}" method="GET"
+            style="display: none;">
+        @csrf
+    </form>
+</div>
+
 <div class="flex flex-col mt-4 mb-4">
     <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
         <div class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">

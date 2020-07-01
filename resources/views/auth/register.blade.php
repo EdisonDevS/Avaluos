@@ -15,7 +15,7 @@
 
                         <div class="flex flex-wrap mb-6">
                             <label for="name" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('Name') }}:
+                                {{ __('Nombre') }}:
                             </label>
 
                             <input id="name" type="text" class="form-input w-full @error('name')  border-red-500 @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -29,7 +29,7 @@
 
                         <div class="flex flex-wrap mb-6">
                             <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('E-Mail Address') }}:
+                                {{ __('E-Mail') }}:
                             </label>
 
                             <input id="email" type="email" class="form-input w-full @error('email') border-red-500 @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -43,7 +43,7 @@
 
                         <div class="flex flex-wrap mb-6">
                             <label for="password" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('Password') }}:
+                                {{ __('Contraseña') }}:
                             </label>
 
                             <input id="password" type="password" class="form-input w-full @error('password') border-red-500 @enderror" name="password" required autocomplete="new-password">
@@ -57,7 +57,7 @@
 
                         <div class="flex flex-wrap mb-6">
                             <label for="password-confirm" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('Confirm Password') }}:
+                                {{ __('Confirma tu contraseña') }}:
                             </label>
 
                             <input id="password-confirm" type="password" class="form-input w-full" name="password_confirmation" required autocomplete="new-password">
@@ -65,13 +65,13 @@
 
                         <div class="flex flex-wrap">
                             <button type="submit" class="inline-block align-middle text-center select-none border font-bold whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700">
-                                {{ __('Register') }}
+                                {{ __('Registrate') }}
                             </button>
 
                             <p class="w-full text-xs text-center text-gray-700 mt-8 -mb-4">
-                                {{ __('Already have an account?') }}
+                                {{ __('¿Ya tienes una cuenta?') }}
                                 <a class="text-blue-500 hover:text-blue-700 no-underline" href="{{ route('login') }}">
-                                    {{ __('Login') }}
+                                    {{ __('Inicia Sesión') }}
                                 </a>
                             </p>
                         </div>

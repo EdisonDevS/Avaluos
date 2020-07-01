@@ -78,7 +78,7 @@
         </div>
 
         <section class="py-12 px-4 text-center">
-        <h2 class="text-3xl mb-8 font-heading slide-in-bottom-h1">¿Cómo funcionamos?</h2>
+        <h2 class="text-3xl mb-8 font-heading slide-in-bottom-h1">¿Cómo funciona?</h2>
         <div class="flex flex-wrap items-center justify-center -mx-8 mb-12 slide-in-bottom-h1">
           <div class="lg:w-1/3 px-8 mb-8 lg:mb-0">
             <img class="mx-auto" src="placeholders/icons/mobile.svg" alt="">
