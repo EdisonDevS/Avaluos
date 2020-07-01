@@ -42,17 +42,31 @@ class User extends Authenticatable
             case 'demo':
                 return [
                     [
-                        'name' => 'Dashboard',
+                        'name' => 'Inicio',
                         'route' =>'home',
                         'url' => '',
-                        'icon' => 'dashboard',
+                        'icon' => 'inicio',
                         'description' => ''
                     ],
                     [
-                        'name' => 'Avaluos',
+                        'name' => 'Mis Avalúos',
                         'route' => 'user.misavaluos',
                         'url' => '',
-                        'icon' => 'badge',
+                        'icon' => 'insignia',
+                        'description' => ''
+                    ],
+                    [
+                        'name' => 'Borradores',
+                        'route' => 'user.borradores',
+                        'url' => '',
+                        'icon' => 'borrador',
+                        'description' => ''
+                    ],
+                    [
+                        'name' => 'Papelera',
+                        'route' => 'user.papelera',
+                        'url' => '',
+                        'icon' => 'basura',
                         'description' => ''
                     ]
                 ];

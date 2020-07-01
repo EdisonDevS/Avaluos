@@ -41,7 +41,7 @@ class LoginTest extends TestCase
     public function usuario_puede_ingresar_con_credenciales_correctas()
     {
 
-        $password = 'contraseñadetest123';
+        $password = 'password';
 
         $user = factory(User::class)->create([
             'password' => bcrypt($password)
@@ -62,7 +62,7 @@ class LoginTest extends TestCase
      */
     public function usuario_no_puede_ingresar_con_credenciale_incorrectas()
     {
-        $password = 'contraseñadetest123';
+        $password = 'password';
 
         $user = factory(User::class)->create([
             'password' => bcrypt($password)
@@ -90,6 +90,32 @@ class LoginTest extends TestCase
         $response1->assertSessionHasErrors('email');
         $this->assertTrue(session()->hasOldInput('email'));
         $this->assertFalse(session()->hasOldInput('password'));
+        $this->assertGuest();
+    }
+
+    /**
+     * @test
+     */
+    public function usuario_cierra_sesion_correctamente()
+    {
+        $password = 'password';
+
+        $user = factory(User::class)->create([
+            'password' => bcrypt($password)
+        ]);
+
+
+        $response = $this->post(route('login'), [
+            'email' => $user->email,
+            'password' => $password,
+        ]);
+
+        $response->assertRedirect(route('home'));
+        $this->assertAuthenticatedAs($user);
+
+        $response = $this->post(route('logout'));
+
+        $response->assertRedirect('');
         $this->assertGuest();
     }
 }

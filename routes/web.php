@@ -42,6 +42,9 @@ Route::middleware(['auth'])->group(function () {
  */
 Route::namespace('User')->middleware(['auth', 'suscripcion:demo'])->prefix('user')->name('user.')->group(function () {
 
-    Route::get('avaluos', 'AvaluoController@misAvaluos')->name('misavaluos');
+    Route::get('avaluos', 'AvaluoController@showMisAvaluos')->name('misavaluos');
+    Route::get('crear_avaluo', 'AvaluoController@showCrearAvaluo')->name('crear_avaluo');
+    Route::get('borradores', 'AvaluoController@showBorradores')->name('borradores');
+    Route::get('papelera', 'AvaluoController@showPapelera')->name('papelera');
 
 });
