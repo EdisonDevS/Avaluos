@@ -37,6 +37,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function avaluos() {
+        return $this->hasMany(Avaluo::class);
+    }
+
     public function menu() {
         switch($this->suscripcion) {
             case 'demo':

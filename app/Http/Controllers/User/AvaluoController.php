@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Avaluo;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -10,12 +11,15 @@ class AvaluoController extends Controller
     //
     public function showMisAvaluos()
     {
-        return view('user.misAvaluos');
+        $misAvaluos = auth()->user()->avaluos;
+
+        return view('user.misAvaluos', compact('misAvaluos'));
     }
 
-    public function crearAvaluo()
+    public function showEditarAvaluo(Request $request)
     {
-        return view('user.editarAvaluo');
+        $avaluo = Avaluo::find($request->id);
+        return view('user.avaluo.editarAvaluo', compact('avaluo'));
     }
 
     public function showBorradores()

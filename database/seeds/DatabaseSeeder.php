@@ -1,5 +1,7 @@
 <?php
 
+use App\Avaluo;
+use App\TipoDocumento;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $this->call(TipoDocumentoSeeder::class);
+        $this->call(UserSeeder::class);
+        $this->call(AvaluoSeeder::class);
     }
 }

@@ -16,9 +16,10 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
 
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <livewire:styles>
 
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none">
@@ -159,6 +160,7 @@
         </main>
     </div>
 </div>
+<livewire:scripts>
 </body>
 <script type="text/javascript">
     $.ajaxSetup({
